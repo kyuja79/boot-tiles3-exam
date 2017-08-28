@@ -52,6 +52,23 @@ public class MemberRepositoryTest {
 	}
 	
 	@Test
+	public void findAllPage(){
+		System.out.println("findAllPage");
+		for(Member member : memberRepository.findAll(new PageRequest(0,5))) {
+			System.out.println(member.toString());
+		}
+	}
+	
+	@Test
+	public void findAllSortPage(){
+		System.out.println("findAllSortPage");
+		PageRequest pageRequest = new PageRequest(0, 5, new Sort(Sort.Direction.DESC, "id")); 
+		for(Member member : memberRepository.findAll(pageRequest)) {
+			System.out.println(member.toString());
+		}
+	}
+	
+	@Test
 	public void findByName(){
 		System.out.println("findByName");
 		for(Member member : memberRepository.findByName("kyuja")) {
