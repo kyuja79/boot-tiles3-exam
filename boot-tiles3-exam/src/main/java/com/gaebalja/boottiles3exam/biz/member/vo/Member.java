@@ -2,6 +2,7 @@ package com.gaebalja.boottiles3exam.biz.member.vo;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -21,9 +22,15 @@ public class Member implements Serializable {
 	//	id, name, email, password
 	@Id
 	@GeneratedValue
-	private Long id;
+	private long id;
+	
+	@Column
 	private String name;
+	
+	@Column
 	private String email;
+	
+	@Column
 	private String password;
 	
 	public Member(String name, String email, String password) {

@@ -22,22 +22,21 @@ public class MemberRepositoryTest {
 	@Autowired
 	private MemberRepository memberRepository;
 	
-	@Before
+//	@Before
 	public void save(){
 		// id, name, email, password
-//		Member member = new Member(4L, "kyuja", "kyuja@danalssocio.com", "1234");
+//		Member member = new Member("kyuja", "kyuja@danalssocio.com", "1234");
 //		memberRepository.save(member);
 		
 		ArrayList<Member> members = new ArrayList<>();
-		members.add(new Member(4L, "kyuja", "kyuja@danalssocio.com", "1234"));
-		members.add(new Member(5L, "kyuja", "kyuja@danalssocio.com", "1234"));
-		members.add(new Member(6L, "kyuja", "kyuja@danalssocio.com", "1234"));
-		members.add(new Member(7L, "kyuja", "kyuja@danalssocio.com", "1234"));
-		members.add(new Member(8L, "kyuja", "kyuja@danalssocio.com", "1234"));
-		members.add(new Member(9L, "kyuja", "kyuja@danalssocio.com", "1234"));
-		members.add(new Member(10L, "kyuja", "kyuja@danalssocio.com", "1234"));
-		members.add(new Member(11L, "kyuja", "kyuja@danalssocio.com", "1234"));
-		
+		members.add(new Member("kyuja", "kyuja1@danalssocio.com", "1234"));
+		members.add(new Member("kyuja", "kyuja2@danalssocio.com", "1234"));
+		members.add(new Member("kyuja", "kyuja3@danalssocio.com", "1234"));
+		members.add(new Member("kyuja", "kyuja4@danalssocio.com", "1234"));
+		members.add(new Member("kyuja", "kyuja5@danalssocio.com", "1234"));
+		members.add(new Member("kyuja", "kyuja6@danalssocio.com", "1234"));
+		members.add(new Member("kyuja", "kyuja7@danalssocio.com", "1234"));
+		members.add(new Member("kyuja", "kyuja8@danalssocio.com", "1234"));
 		members
 			.stream()
 			.forEach(member -> memberRepository.save(member));
@@ -94,6 +93,14 @@ public class MemberRepositoryTest {
 		for(Member member : result.getContent()){
 			System.out.println(member.toString());
 		}
+	}
+	
+	@Test
+	public void findById(){
+		System.out.println("findById");
+		Long id = 3L;
+		Member member = memberRepository.findOne(id);
+		System.out.println(member.toString());
 	}
 	
 }

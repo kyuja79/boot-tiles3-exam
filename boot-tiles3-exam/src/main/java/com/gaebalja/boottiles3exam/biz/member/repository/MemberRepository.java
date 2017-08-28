@@ -15,4 +15,5 @@ public interface MemberRepository extends PagingAndSortingRepository<Member, Lon
 	Page<Member> findByName(String name, Pageable pageable);
 	
 	List<Member> findByName(String name);
+	
 }
