@@ -20,7 +20,7 @@ public class MemberService {
 		memberRepo.save(member);
 	}
 	
-	public Member findById(Long id){
+	public Member findById(long id){
 		return memberRepo.findOne(id);
 	}
 	
@@ -31,6 +31,5 @@ public class MemberService {
 	public Page<Member> findByName(String name, Pageable pageable){
 		return memberRepo.findByName(name, pageable);
 	}
-	
 	
 }
