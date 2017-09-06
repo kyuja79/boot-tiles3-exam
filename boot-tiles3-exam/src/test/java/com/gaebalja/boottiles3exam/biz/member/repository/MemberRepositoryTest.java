@@ -2,9 +2,10 @@ package com.gaebalja.boottiles3exam.biz.member.repository;
 
 import java.util.ArrayList;
 
+import javax.inject.Inject;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -18,7 +19,7 @@ import com.gaebalja.boottiles3exam.biz.member.vo.Member;
 @SpringBootTest(classes = BootTiles3ExamApplication.class)
 public class MemberRepositoryTest {
 
-	@Autowired
+	@Inject
 	private MemberRepository memberRepository;
 	
 //	@Before
