@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Hello Millky</title>
-<link rel="stylesheet" href="/webjars/bootstrap/3.3.4/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
 </head>
 <body>
 	<div class="container">
@@ -57,7 +57,7 @@
       </p>
 	</div>
 
-	<script src="/webjars/jquery/2.1.3/dist/jquery.min.js"></script>
-	<script src="/webjars/bootstrap/3.3.4/dist/js/bootstrap.min.js"></script>
+	<script src="/webjars/jquery/2.1.3/jquery.min.js"></script>    
+	<script src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
